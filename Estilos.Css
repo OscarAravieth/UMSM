@@ -1,0 +1,198 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Times New Roman', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.capa{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #FFFFFF;/*cambio de color de la pagina*/
+	z-index: -1;
+	top: 0;left: 0;
+	background-color: rgba(0,0,0,.5);
+	width:100%;
+	height:42px;
+}
+	/*Estilos para el encabezado*/
+.header{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;left: 0;
+}
+.container{
+	width: 100%;
+	max-width: 1500px;
+	margin: auto;
+}
+.container .btn-menu, .logo{
+	float: left;
+	line-height:45px;
+}
+.container .btn-menu label{
+	color:#000000;/*cambio de color del icono de menu*/
+	font-size: 25px;
+	cursor: pointer;
+}
+.logo h1{
+	color:#FFFFFF;/*cambio de color de las letras del menu*/
+	font-weight: 400;
+	font-size: 20px;
+	margin-left: 20px;
+	position: absolute;top:-1px;
+
+}
+.container .menu{
+	float: right;
+	line-height: 10px;
+}
+.container .menu a{
+	display: inline-block;
+	padding: 10px;
+	line-height: normal;
+	text-decoration: none;
+	color: #FFFFFF;/*cambio de color de las letras fijas que se encuentran abajo de los menus secundarios*/
+	transition: all .5s ease;
+	border-bottom: 2px rgba(0,0,0,.1);/*cambio de color de las barras fijas que se encuentran abajo de los menus secundarios*/
+	font-size: 20px;
+	margin-right: 15px;
+}
+.container .menu a:hover{
+	border-bottom: 2px solid #D31146;/*cambio de color de las barras que se encuentran abajo de los menus secundarios*/
+	padding-bottom: 5px;
+}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+#btn-menu{
+	display: none;
+}
+.container-menu{
+	position: absolute;
+	background-color:rgba(0,0,0,0.5);/*cambio de color de la pagina principal cuando se despliega el menu*/
+	width: 100%;
+	height: 100vh;
+	top: 0;left: 0;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+	opacity: 1;
+	visibility: visible;
+}
+.cont-menu{
+	width: 100%;
+	max-width: 250px;
+	background-color: rgba(0,0,0,.5);/*cambio de color del menu desplegable*/
+	height: 100vh;
+	position: fixed;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+	transform: translateX(0%);
+}
+.cont-menu nav{
+	transform: translateY(15%);
+}
+.cont-menu nav a{
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	color: #FFFFFF;/*color de letras del menu*/
+	border-left: 8px solid transparent; 
+	transition: all 500ms ease;
+}
+.cont-menu nav a:hover{
+	border-left: 15px solid #FFFFFF;/*cambio de color de la linea alado de cuando se coloca el cursor*/
+	background: rgba(211, 17, 70,.7);/*cambio de color al colocar el cursor*/
+}
+.cont-menu label{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	color: #000000;
+	cursor: pointer;
+	font-size: 15px;
+}
+.Imagen{
+	position: absolute;top: 5px; left: 400px;
+}
+.Imagen1{
+	position: absolute;top:-10px; left: 560px;
+}
+.Texto{
+	color:#FFFFFF;
+	font-family:Arial-serif;
+}
+.img1{
+	position: absolute; right:540px; top:12px;
+}
+.img2{
+	position: absolute; right:451px; top:10px;
+}
+.img3{
+	position: absolute; right:325px; top:13px;
+}
+.img4{
+	position: absolute; right:205px; top:14px;
+}
+.img5{
+	position: absolute; right:92px; top:12px;
+}
+	.slider-frame {
+width: 1000px;
+height: auto;
+margin:100px auto 0;
+overflow: hidden;
+}
+	.slider-frame ul {
+display: flex;
+padding: 0;
+width: 400%;
+animation: slide 15s infinite alternate ease-in-out;
+}
+	.slider-frame li {
+width: 100%;
+list-style: none;
+}
+	.slider-frame img {
+width: 100%;
+}
+	@keyframes slide {
+0% {margin-left: 0;}
+20% {margin-left: 0;}	
+25% {margin-left: -100%;}
+45% {margin-left: -100%;}	
+50% {margin-left: -200%;}
+70% {margin-left: -200%;}
+75% {margin-left: -300%;}
+100% {margin-left: -300%;}
+}
+.li1{
+	text-align: center;
+	color:#000000;
+	line-height: 1.5em;
+	font-family: "Segoe UI";
+	font-size:16px;
+}
+.p1{
+background-color:#D31146;
+width:100%;
+height:200px;
+}
+.pcontenido{
+	font-family:font-family: 'Times New Roman', sans-serif;
+	font-size:20px;
+	color:#FFFFFF;
+}
+marquee{
+	position: fixed; top:45px;
+	
+}
